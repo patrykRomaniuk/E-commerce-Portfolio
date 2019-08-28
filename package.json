@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "proxy": "http://localhost:5000",
   "scripts": {
     "client": "cd client && npm start",
     "start": "node server.js",
