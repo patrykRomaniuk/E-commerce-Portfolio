@@ -20,7 +20,7 @@ export const loadUser = () => async dispatch => {
         setAuthToken(localStorage.token);
     }
     try {
-        const res = await axios.get('http://localhost:5000/api/users/me');
+        const res = await axios.get('https://obscure-wave-98753.herokuapp.com/api/users/me');
         dispatch({
             type: USER_LOADED,
             payload: res.data
@@ -39,7 +39,7 @@ export const registerUser = (name,last_name,username,email,password) => async di
             }
         };
         const body = JSON.stringify({ name,last_name,username,email,password });
-        const res = await axios.post('http://localhost:5000/api/users',body,config);
+        const res = await axios.post('https://obscure-wave-98753.herokuapp.com/api/users',body,config);
         dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data
@@ -58,7 +58,7 @@ export const loginUser = ( email,password ) => async dispatch => {
             }
         };
         const body = JSON.stringify({ email,password });
-        const res = await axios.post('http://localhost:5000/api/auth',body,config);
+        const res = await axios.post('https://obscure-wave-98753.herokuapp.com/api/auth',body,config);
         dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
@@ -80,7 +80,7 @@ export const addHeart = (image,price,priceStart,name,genderName,url,itemUrl) => 
             }
         };
         const body = JSON.stringify({ image,price,priceStart,name,genderName,url,itemUrl });
-        const res = await axios.put('http://localhost:5000/api/hearts',body,config);
+        const res = await axios.put('https://obscure-wave-98753.herokuapp.com/api/hearts',body,config);
         dispatch({
             type: ADD_HEART,
             payload: res.data
@@ -93,7 +93,7 @@ export const addHeart = (image,price,priceStart,name,genderName,url,itemUrl) => 
 
 export const removeHeart = heartID => async dispatch => {
     try {
-        const res = await axios.delete(`http://localhost:5000/api/hearts/${heartID}`);
+        const res = await axios.delete(`https://obscure-wave-98753.herokuapp.com/api/hearts/${heartID}`);
         dispatch({
             type: REMOVE_HEART,
             payload: res.data
@@ -112,7 +112,7 @@ export const addShopItem = (name,price,priceStart,image,size) => async dispatch 
             }
         };
         const body = JSON.stringify({ name,price,priceStart,image,size })
-        const res = await axios.put('http://localhost:5000/api/shopItems',body,config);
+        const res = await axios.put('https://obscure-wave-98753.herokuapp.com/api/shopItems',body,config);
         dispatch({
             type: ADD_ITEM,
             payload: res.data
@@ -126,7 +126,7 @@ export const addShopItem = (name,price,priceStart,image,size) => async dispatch 
 
 export const removeShopItem = shopItemID => async dispatch => {
     try {
-        const res = await axios.delete(`http://localhost:5000/api/shopItems/${shopItemID}`);
+        const res = await axios.delete(`https://obscure-wave-98753.herokuapp.com/api/shopItems/${shopItemID}`);
         dispatch({
             type: REMOVE_ITEM,
             payload: res.data
