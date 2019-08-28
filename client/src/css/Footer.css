@@ -1,0 +1,168 @@
+.main-footer {
+    width: 100vw;
+    margin-left: -20px;
+    background-color: #191919;
+    margin-top: 4em;
+  }
+  
+  .main-footer .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    color: #f4f4f4;
+    width: 50%;
+    padding: 30px;
+  }
+  
+  .main-footer .footer-container .footer-divs {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "bolded get-help about-company";
+    border-bottom: 1px solid #999;
+  }
+  
+  .main-footer .footer-container .footer-divs .bold {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: bolded;
+  }
+  
+  .main-footer .footer-container .footer-divs .get-help {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: get-help;
+  }
+  
+  .main-footer .footer-container .footer-divs .about-company {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: about-company;
+  }
+  
+  .main-footer .footer-container .footer-divs .about {
+    color: #999;
+  }
+  
+  .main-footer .footer-container .footer-divs .list {
+    list-style: none;
+    margin: .25em;
+    cursor: pointer;
+  }
+  
+  .main-footer .footer-container .footer-divs .about {
+    margin: .5em;
+  }
+  
+  .main-footer .footer-container .footer-divs .about:hover {
+    color: #aaa;
+  }
+  
+  .main-footer .footer-container .footer-divs .bolded {
+    font-family: Oswald, sans-serif;
+  }
+  
+  .main-footer .footer-container .footer-divs .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  
+  .main-footer .footer-container .footer-divs .social-media .social-href {
+    text-decoration: none;
+    color: #999;
+  }
+  
+  .main-footer .footer-container .footer-divs .social-media .social-href:hover {
+    cursor: pointer;
+    color: #f4f4f4;
+  }
+  
+  .main-footer .footer-container .footer-divs .social-media .social {
+    font-size: 2em;
+    margin: .5em;
+  }
+  
+  .main-footer .footer-container .under-footer {
+    margin-top: -50px;
+    color: #fff;
+  } 
+  .main-mobile {
+    display: none;
+  }  
+  @media(max-width: 768px){
+    .main-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        width: 110%;
+      }
+      .main-footer .footer-container {
+        height: auto;
+      }
+      .main-footer .footer-container .footer-divs {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: "bolded"
+     "get-help"
+     " about-company" 
+     "socialMedia";
+        border-bottom: 1px solid #999;
+      }
+      .main-footer .footer-container .footer-divs .list {
+        font-size: 1.2em;
+      }
+      .main-footer .footer-container .footer-divs .bold {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        grid-area: bolded;
+      }
+      .main-footer .footer-container .footer-divs .get-help {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        grid-area: get-help;
+      }
+      .main-footer .footer-container .footer-divs .about-company {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        grid-area: about-company;
+      }
+      .main-footer .footer-container .footer-divs .social-media {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+        grid-area: socialMedia;
+      }
+      .main-footer .footer-container .footer-divs .social-media .social {
+        font-size: 1.5em;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+      }
+      .main-footer .footer-container .footer-divs .under-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-left: 25px;
+      }
+  }

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Cute+Font&display=swap');
+/*                  FILTER SECTION                  */
+.filter-items-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.filter-wrapper{
+    width: 30%;
+    text-align: center;
+}
+.filter-items-wrapper .filter-wrapper .filter-price{
+    display: flex;
+    flex-direction: column;
+}
+.filter-items-wrapper .filter-wrapper .filter-price .range input{
+    width: 100%;
+    color: #191919;
+}
+.filter-items-wrapper .filter-wrapper .range-info{
+    display: flex;
+    justify-content: space-around;
+}
+.filter-items-wrapper .items-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 70%;
+}
+
+/*              ITEM WRAPPER SECTION                */
+
+.items-wrapper .item{
+    min-width: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    border: 1px solid #191919;
+}
+.item-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1em !important;
+}
+
+/*                INFO   SECTION            */
+
+.info-wrapper{
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #191919;
+    flex-wrap: wrap;
+}
+.info-wrapper .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+.info-wrapper .info .item-price{
+    font-size: 1.5em;
+    font-family: 'Cute Font',sans-serif !important;
+}
+.info-wrapper .info span{
+    font-family: 'Oswald',sans-serif;
+    color: #191919;
+    font-size: 1.3em;
+    padding: 5px;
+}
+.info-wrapper .nutrition-icons{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-wrapper .nutrition-icons a{
+    text-decoration: none;
+    color: #191919;
+}
+.shopping-cart{
+    transition: color .5s ease-in-out;
+}
+.shopping-cart:hover{
+    color: #d4c1c1;
+}
+.heart-icon{
+    z-index: 1;
+    padding: 0;
+}
+.info-wrapper .nutrition-icons i{
+    font-size: 1.8em;
+    padding: 10px;
+}
+.info-wrapper .nutrition-icons i:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 1024px){
+    .filter-items-wrapper .items-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 768px){
+    .filter-items-wrapper .items-wrapper{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        margin: 0 auto;
+        width: 90%;
+        margin-left: -1em;
+    }
+    .filter-wrapper{
+        width: 90%;
+    }
+    .item-wrapper{
+        width: 100vw;
+    }
+    .info-wrapper{
+        height: 20vh;
+    }
+}

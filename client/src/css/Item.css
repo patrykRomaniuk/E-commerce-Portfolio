@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Baloo+Bhai&display=swap');
+.item-section-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+/*                              INFO_SECTION                */
+
+.item-section-wrapper .item-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 90vh;
+}
+.item-section-wrapper .item-info-wrapper .info-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    min-height: 5%;
+}
+.item-section-wrapper .item-info-wrapper .info-section .item-name{
+    font-size: 1.8em;
+    color: #191919;
+    font-family: 'Oswald',sans-serif;
+}
+.item-section-wrapper .item-info-wrapper .info-section .item-price{
+    font-size: 1.3em;
+    color: #191919;
+    font-family: 'Baloo Bhai',sans-serif;
+}   
+
+/*                           SIZE_SECTION                        */
+
+.item-section-wrapper .item-info-wrapper .size-section{
+    display: grid;
+    justify-content: space-around !important;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: .5em;
+    margin: 0 auto;
+    height: 65%;
+    width: 100%;
+}
+.item-section-wrapper .item-info-wrapper .size-section div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50%;
+    border: 1px solid rgb(224, 214, 214);
+}
+.item-section-wrapper .item-info-wrapper .size-section div:hover{
+    cursor: pointer;
+}
+.item-section-wrapper .item-info-wrapper .size-section div span{
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.5em;
+    color: #191919;
+}
+
+/*                                  BUTTONS_SECTION                     */
+
+.item-section-wrapper .item-info-wrapper .buttons-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 20%;
+    width: 100vw;
+}
+.item-section-wrapper .item-info-wrapper .buttons-section div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: opacity .4s ease-in-out;
+    width: 50%;
+    height: 25%;
+    border-radius: 25px; 
+}
+.item-section-wrapper .item-info-wrapper .buttons-section div:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.item-section-wrapper .item-info-wrapper .buttons-section div a{
+    font-size: 1.2em;
+    font-family: 'Baloo Bhai',sans-serif;
+    text-decoration: none;
+}
+
+.item-section-wrapper .item-info-wrapper .buttons-section .basket-item-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30vw;
+    background: #191919;
+}
+.item-section-wrapper .item-info-wrapper .buttons-section .basket-item-btn a{
+    color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    padding-top: 3px;
+}
+.item-section-wrapper .item-info-wrapper .buttons-section .favourite-item-btn{
+    width: 30vw;
+    background: #fff;
+    border: 1px solid rgb(224, 214, 214);
+}
+.item-section-wrapper .item-info-wrapper .buttons-section .favourite-item-btn a{
+    color: #191919;
+}
+
+@media(max-width: 1025px){
+    .main-img{
+        width: 100vw !important;
+    }
+    .item-section-wrapper .item-info-wrapper .size-section{
+        width: 100% !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
+    .item-section-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons-section{
+        display: flex !important;
+        flex-wrap: wrap;
+        flex-direction: column !important;
+    }
+    .item-section-wrapper .item-info-wrapper .buttons-section div{
+        width: 100% !important;
+    }
+    .item-section-wrapper .item-info-wrapper .buttons-section .basket-item-btn{
+        flex-wrap: wrap;
+        height: 8vh;
+        font-size: 2em;
+    }
+    .item-section-wrapper .item-info-wrapper .buttons-section .favourite-item-btn{
+        height: 11vh;
+        font-size: 2em;
+    }
+}
+
+@media(max-width: 768px){
+    .buttons-section{
+        height: 40vh !important;
+    }
+    .item-info-wrapper{
+        min-height: 140vh !important;
+    }
+    .item-section-wrapper .item-info-wrapper .buttons-section .basket-item-btn{
+        font-size: 1.2em;
+    }
+    .item-section-wrapper .item-info-wrapper .buttons-section .favourite-item-btn{
+        font-size: 1.2em;
+    }
+    .item-section-wrapper .item-info-wrapper .info-section .item-price{
+        font-size: 1em;
+    }
+    .item-section-wrapper .item-info-wrapper .info-section .item-name{
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .item-section-wrapper .item-info-wrapper .size-section{
+        min-height: 350px;
+        flex-wrap: wrap;
+        grid-template-columns: 100% !important;
+    }
+    .item-section-wrapper .item-info-wrapper .size-section div{
+        width: 100% !important;
+        height: 100% !important; 
+    }
+}

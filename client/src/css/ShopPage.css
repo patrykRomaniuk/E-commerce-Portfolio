@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Cute+Font|Lora|Baloo&Bhai&display=swap');
+.main-section-shopPage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row !important;
+    width: 100vw;
+    height: auto;
+}
+
+/*                  SHOP ITEMS                      */
+
+.main-section-shopPage .shop-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+    border: 1px solid #e0d5d5;
+    width: 60%;
+}
+.main-section-shopPage .lack-of-shopItem p{
+    font-family: 'Oswald',sans-serif;
+    font-size: 2em;
+    color: #191919;
+}
+.main-section-shopPage .shop-items .shop-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    border: 1px solid rgb(59, 50, 50);
+} 
+.main-section-shopPage .shop-items .shop-item:last-child{
+    margin-bottom: 0em;
+}      
+.main-section-shopPage .shop-items .shop-item .item-name p{
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.4em;
+}       
+.main-section-shopPage .shop-items .shop-item .item-price p{
+    font-family: 'Baloo Bhai',sans-serif;
+    font-size: 1.4em;
+}          
+.main-section-shopPage .shop-items .shop-item .item-size{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Baloo Bhai',sans-serif;
+}
+.quantity-wrapper{
+    display: flex;
+    
+}
+.item-img{
+    width: 180px;
+    height: 180px;
+}
+.delete-heart{
+    border-radius: 5px;
+    background: rgb(240, 56, 39);
+    padding: 15px;
+} 
+.delete-heart:hover{
+    cursor: pointer;
+    background: rgb(235, 106, 95);
+}
+.delete-heart i{
+    color: #f4f4f4;
+}
+
+/*                    PRICE CALCULATOR            */
+
+.main-section-shopPage .price-calculator{
+    padding: 1em 2em;
+    width: 20%;
+    height: 40vh;
+    border-radius: 5px;
+    background: #111;
+}
+.main-section-shopPage .price-calculator .summary{
+    color: #f4f4f4;
+    font-family: 'Baloo Bhai',sans-serif;
+    font-size: 2em;
+}
+.main-section-shopPage .price-calculator .sum{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    color: #f4f4f4;
+    font-family: 'Cute Font',sans-serif;
+}
+.main-section-shopPage .price-calculator .buttons-basket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+.main-section-shopPage .price-calculator .buttons-basket .buy-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(235, 157, 13);
+    transition: all .2s ease-in-out;
+}
+.main-section-shopPage .price-calculator .buttons-basket .buy-btn:hover,
+.main-section-shopPage .price-calculator .buttons-basket .buy-btn p:hover,
+.main-section-shopPage .price-calculator .buttons-basket .buy-btn i:hover{
+    cursor: pointer;
+    color: #f4f4f4;
+    background: rgb(235, 171, 54);
+}
+@media(max-width: 1024px){
+    .main-section-shopPage .shop-items{
+        width: 70vw !important;
+    }
+    .delete-heart{
+        margin-right: 1em;
+    }
+}
+@media(max-width: 768px){
+    .main-section-shopPage .shop-items{
+        width: 100vw !important;
+    }
+    .item-img{
+        width: 80px;
+        height: 80px;
+    }
+    .main-section-shopPage .shop-items .shop-item .item-name p{
+        font-size: .8em;
+    }
+    .main-section-shopPage .shop-items .shop-item .item-price p{
+        font-size: .8em;
+    }
+    .main-section-shopPage .lack-of-shopItem p{
+        font-size: 1.3em;
+    }
+    .main-section-shopPage{
+        flex-direction: column !important;
+    }
+    .main-section-shopPage .price-calculator{
+        margin-top: 2em;
+        width: 50%;
+    }
+    .main-section-shopPage .price-calculator .buttons-basket .buy-btn{
+        margin-bottom: 2em;
+    }
+    .delete-heart{
+        padding: 8px;
+    }
+}

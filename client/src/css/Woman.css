@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Baloo+Bhai&display=swap');
+body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main-title{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-title span{
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+    font-family: 'Baloo Bhai',sans-serif;
+    color: #191919;
+}
+.main-title ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 0;
+}
+.main-title ul li{
+    list-style: none;
+}
+.main-title ul li a{
+   text-decoration: none;
+   font-family: 'Oswald',sans-serif;
+   padding: 10px;
+   font-size: 1.5em;
+   color: #191919;
+   border-right: 1px solid #191919;
+}
+.main-title ul li a:hover{
+    color: #d4c1c1;
+    cursor: pointer;
+}
+.main-title ul li a:first-child{
+    border-left: 1px solid #191919;
+}
+.main-title ul li a:last-child{
+    border-right: 1px solid #191919;
+}
+
+/*                  MOBILE                        */
+
+@media(max-width: 768px){
+    .main-title span{
+        font-size: 2em;
+    }
+    .main-title ul li a{
+        font-size: 1.5em;
+    }
+}

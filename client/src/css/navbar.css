@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Baloo+Bhai&display=swap');
+.sidebar{
+    background: #000;
+    position: fixed;
+    height: 110vh;
+    z-index: 2;
+}
+.sidebar i{
+    display: block;
+    position: fixed;
+    top: 15%;
+    right: 15%;
+    color: #f4f4f4;
+    font-size: 2em;
+}
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.sidebar ul li{
+    list-style: none;
+    margin: 0;
+}
+.sidebar ul li a{
+    color: #f4f4f4;
+    text-decoration: none;
+    font-family: 'Oswald',sans-serif;
+    transition: color .3s ease-in-out;
+    font-size: 2em;
+}
+.sidebar ul li a:hover{
+    color: #d4c1c1;
+    cursor: pointer;
+}
+.navbar{
+    width: 100vw;
+    height: 14vh;
+    display: flex;
+    position: fixed;
+    top: 3%;
+    left: 0;
+    justify-content: space-around;
+    z-index: 12;
+    background: #fff;
+    border-top: 1px solid #191919;
+    border-bottom: 1px solid #191919;
+}
+.logo-wrapper{
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-wrapper .kout-img{
+    width: 100px;
+    height: 100px;
+}
+.nav-links a {
+    color: #191919;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.8em;
+}
+.nav-links a:hover{
+    color: #d4c1c1;
+}
+.navbar-items h1{
+    font-family: 'Baloo Bhai',sans-serif;
+    text-align: center;
+}
+.navbar-items ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.navbar-items ul li{
+    margin-left: 0;
+    padding-bottom: 15px;
+}
+.navbar-items ul li a{
+    color: #191919;
+    text-decoration: none;
+    font-family: 'Oswald',sans-serif;
+}
+.navbar-items ul li a:hover{
+    cursor: pointer;
+    color: #d4c1c1;
+}
+.sign-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Baloo Bhai',sans-serif;
+    font-size: 1.5em;
+}
+.sign-wrapper span{
+    margin: 5px;
+}
+.sign-wrapper span a{
+    color: #191919;
+    text-decoration: none;
+}
+.sign-wrapper span a:hover,
+.sign-wrapper span i:hover{
+    color: #d4c1c1;
+    cursor: pointer;
+}
+.sign-wrapper .shopping-cart-desktop{
+    z-index: 2;
+    color: #191919;
+}
+.mobile-version{
+    display: none;
+}
+
+/*                  ON HOVER                     */
+
+.hover-nav section div ul li{
+    list-style: none;
+}
+.hover-nav section div ul li a{
+    color: #191919;
+}
+
+/*              MOBILE          */
+
+@media(max-width: 768px){
+    .navbar{
+        justify-content: space-between;
+    }
+    .logo-wrapper .kout-img{
+        width: 80px;
+        height: 80px;
+    }
+    #nav-links-id{
+        display: none !important;
+    }
+    .sign-wrapper{
+        display: none;
+    }
+    .hover-nav{
+        display: none !important;
+    }
+    .mobile-version{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-version i{
+        margin: 10px;
+        font-size: 1.8em;
+        color: #191919;
+    }
+}

@@ -1,0 +1,90 @@
+.account-items-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+}
+.account-items-wrapper .account-item{
+    display: flex;
+    flex-direction: column;
+    background: rgb(219, 219, 218);
+    border-right: 1px solid #191919;
+    border-left: 1px solid #191919;
+    width: 100%;
+}
+.account-items-wrapper .account-item header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #191919;
+    border-bottom: 1px solid #191919;
+    height: 20%;
+}
+.account-items-wrapper .account-item header div{
+    display: flex;
+    flex-direction: column;
+} 
+h1{ font-family: 'Oswald',sans-serif; }
+p{ 
+    font-family: 'Baloo Bhai',sans-serif; 
+    font-size: .8em;
+}
+.account-items-wrapper .account-item header div h1,
+.account-items-wrapper .account-item header div p{
+    text-align: center;
+    color: #191919;
+    cursor: pointer;
+}
+.account-items-wrapper .account-item section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #191919;
+    height: 60%;
+}
+.account-items-wrapper .account-item section .account-img-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20vh;
+    font-size: 10em;
+   /* background: url('./icon-prof.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+}
+.account-items-wrapper .account-item section .account-section-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+    width: 50%;
+    text-align: center;
+    margin: 1em 0em;
+}
+.account-items-wrapper .account-item footer{
+    border-bottom: 1px solid #191919;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.account-items-wrapper .account-item footer h3{
+    text-decoration: underline;
+}
+.account-items-wrapper .account-item footer h3:hover{
+    cursor: pointer;
+    color: #dcdcdc;
+}
+@media(min-width: 768px){
+    .account-items-wrapper{
+        width: 60%;
+        margin: 0 auto;
+    }
+}

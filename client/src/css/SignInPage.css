@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Baloo&Bhai&display=swap');
+.register-showUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+}
+.register-showUp h1{
+    font-size: 3em;
+    font-family: 'Oswald',sans-serif; 
+}
+.register-showUp span{
+    font-size: 2em;
+    font-family: 'Baloo Bhai',sans-serif;
+}
+.main-section-sign-in{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+    height: auto;
+    /*background: #33043c;*/
+}
+.main-section-sign-in .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh !important;
+}
+.main-section-sign-in .info span{
+    font-size: 1.6em;
+    color: #191919;
+    font-family: 'Oswald',sans-serif;
+}
+.main-section-sign-in .inputs-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-section-sign-in .inputs-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.main-section-sign-in .inputs-wrapper input{
+    padding: 1em 1em;
+    width: 80vw;
+    margin-bottom: 1em;
+}
+.main-section-sign-in .inputs-wrapper .button-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.main-section-sign-in .inputs-wrapper .button-wrapper div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .5em 1em;
+    background: #191919;
+}
+.main-section-sign-in .inputs-wrapper .button-wrapper div span{
+    width: 100%;
+    height: 100%;
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    color: #f4f4f4;
+}
+.main-section-sign-in .inputs-wrapper .button-wrapper div:hover{
+    color: #d4c1c1;
+    background: #222;
+    cursor: pointer;
+}
+@media(min-width: 1024px){
+    .inputs-wrapper input{
+        width: 15vw !important;
+    }
+    
+}

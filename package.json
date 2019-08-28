@@ -1,0 +1,26 @@
+{
+  "name": "muslim_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "proxy": "http://localhost:5000",
+  "scripts": {
+    "client": "cd client && npm start",
+    "start": "node server.js",
+    "forever": "forever -w server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "forever": "^1.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.8",
+    "request": "^2.88.0"
+  }
+}

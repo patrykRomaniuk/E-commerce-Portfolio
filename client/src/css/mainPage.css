@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Josefin+Sans&display=swap');
+.image-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: url('./mainPageImage.jpeg');
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: cover;
+}
+.header-links-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 100vh;
+}
+.header .info-header{
+    text-align: center;
+    font-size: 4.5em;
+    color: #f4f4f4;
+    font-family: 'Josefin Sans',sans-serif;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links a{
+    color: #f4f4f4;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Barlow',sans-serif;
+    padding: 15px;
+    border: 1px solid #c39933;
+    margin: 10px;
+    font-size: 1.5em;
+    background: none;
+    transition: all .5s ease-in-out;
+}
+.links a:hover{
+    background: #c39933;
+}
+@media(max-width: 768px){
+    .image-wrapper{
+        z-index: -1;
+        background-position: 0% 0% /* Change to: 60% 60%*/;
+    }
+    .header-links-wrapper{
+        width: 100vw;
+    }
+    .header .info-header{
+        font-size: 2em;
+    }
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+    }
+    .links{
+        width: 100vw;
+        flex-direction: column;
+    }
+    .links a{
+        padding: 10px;
+        margin: 5px;
+    }
+}

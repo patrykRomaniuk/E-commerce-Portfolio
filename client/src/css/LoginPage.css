@@ -1,0 +1,56 @@
+.login-page-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+.login-page-wrapper .login-section{
+    width: 40%;
+}
+.login-page-wrapper .login-section header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-page-wrapper .login-section .login-inputs-wrapper div{
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+.login-page-wrapper .login-section .login-inputs-wrapper div label{
+    text-align: center;
+    margin-bottom: .5em;
+    font-family: 'Baloo Bhai',sans-serif;
+}
+.login-page-wrapper .login-section .login-inputs-wrapper div input{
+    width: 40%;
+    margin: 0 auto;
+    padding: 5px;
+}
+.login-page-wrapper .login-section .login-inputs-wrapper .login-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #191919;
+    width: 42%;
+    padding: .5em 0;
+    margin: 0 auto;
+    color: #f4f4f4;
+}
+.login-page-wrapper .login-section .login-inputs-wrapper .login-btn:hover{
+    cursor: pointer;
+    background: #181818;
+}
+.login-page-wrapper .login-section .login-inputs-wrapper .login-btn span{
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.5em;
+}
+@media(max-width: 768px){
+    .login-page-wrapper .login-section .login-inputs-wrapper div input{
+        width: 80%;
+    }
+    .login-page-wrapper .login-section .login-inputs-wrapper .login-btn{
+        width: 80%;
+    }
+}
