@@ -12,7 +12,8 @@
     "react-scripts": "0.9.5",
     "react-spinners": "^0.6.0",
     "redux": "^4.0.4",
-    "redux-devtools-extension": "^2.13.8"
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {},
   "scripts": {
