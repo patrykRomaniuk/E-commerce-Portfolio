@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import '../css/Items.css'
 
-function Items({ addHeart,minPrice,maxPrice,items,url,genderName,priceNum }) {
+function Items({ addHeart,minPrice,maxPrice,items,url,genderName,auth }) {
     const [heartArray,setHeartArray] = useState([])
     let [changePrice,setChangePrice] = useState(maxPrice);
     let [actualFilter,setActutalFilter] = useState([...items]);
@@ -37,17 +37,21 @@ function Items({ addHeart,minPrice,maxPrice,items,url,genderName,priceNum }) {
                         <i className={ item.isHeart ? "fas fa-heart heart-icon heart-added" : "far fa-heart heart-icon"}
                         style={{ color: item.isHeart ? "red" : '' }}
                          onClick={() => {
-                             item.isHeart = !item.isHeart;
-                             setHeartArray({heart: item.isHeart})
-                             addHeart(
-                                 item.img,
-                                 item.priceNum,
-                                 item.priceNum,
-                                 item.name,
-                                 genderName,
-                                 url,
-                                 item.itemUrl
-                            );
+                             if(auth.isAuthenticated){
+                                item.isHeart = !item.isHeart;
+                                setHeartArray({heart: item.isHeart})
+                                addHeart(
+                                    item.img,
+                                    item.priceNum,
+                                    item.priceNum,
+                                    item.name,
+                                    genderName,
+                                    url,
+                                    item.itemUrl
+                               );
+                             } else {
+                                 alert("You are not registered")
+                             }          
                          }}></i>
                             <Link to={`/${genderName}/${url}/${item.itemUrl}`}>
                                 <i className="fas fa-shopping-cart shopping-cart"></i>
@@ -96,4 +100,8 @@ function Items({ addHeart,minPrice,maxPrice,items,url,genderName,priceNum }) {
     )
 }
 
-export default connect(null, { addHeart })(Items);
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(mapStateToProps, { addHeart })(Items);

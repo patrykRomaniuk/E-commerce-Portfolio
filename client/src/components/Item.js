@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { addShopItem,addHeart } from '../actions/auth';
 
-function Item({ genderName,url,itemUrl,name,price,img,priceNum,addShopItem,addHeart }) {
+function Item({ genderName,url,itemUrl,name,price,img,priceNum,addShopItem,addHeart,auth }) {
     const [size,setSize] = useState(null);
     return (
         <div className="main-wrapper">
@@ -72,7 +72,11 @@ function Item({ genderName,url,itemUrl,name,price,img,priceNum,addShopItem,addHe
                     <div className="buttons-section">
                         <div className="basket-item-btn" onClick={() => {
                             if(size !== null){
-                                addShopItem(name,priceNum,priceNum,img,size);
+                                if(auth.isAuthenticated){
+                                    addShopItem(name,priceNum,priceNum,img,size);
+                                } else {
+                                    return alert("You are not registered");
+                                }
                             }else{
                                 return alert("Please Choose Size");
                             }
@@ -83,15 +87,19 @@ function Item({ genderName,url,itemUrl,name,price,img,priceNum,addShopItem,addHe
                         </div>
                         <div className="favourite-item-btn"
                                  onClick={()=>{
-                                    addHeart(
-                                        img,
-                                        priceNum,
-                                        priceNum,
-                                        name,
-                                        genderName,
-                                        url,
-                                        itemUrl
-                                   );
+                                    if(auth.isAuthenticated){
+                                        addHeart(
+                                            img,
+                                            priceNum,
+                                            priceNum,
+                                            name,
+                                            genderName,
+                                            url,
+                                            itemUrl
+                                       );
+                                    } else {
+                                        alert("You are not registered");
+                                    }                      
                                 }}>
                             <Link to="/heart-page">
                                 Add To Favourite <i className="far fa-heart"></i>
@@ -105,4 +113,8 @@ function Item({ genderName,url,itemUrl,name,price,img,priceNum,addShopItem,addHe
     )
 }
 
-export default connect(null, { addShopItem,addHeart })(Item);
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(mapStateToProps, { addShopItem,addHeart })(Item);
