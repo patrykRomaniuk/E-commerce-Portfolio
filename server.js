@@ -25,6 +25,7 @@ if(process.env.NODE_ENV === 'production'){
     });
 }
 
+//Initialized Port ( checking if value is added from proccess.env, if not making localhost:5000 )
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`App running on Port: ${PORT}`));
