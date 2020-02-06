@@ -4,6 +4,7 @@ const app = express();
 const cors = require('cors');
 const connectDatabase = require('./config/db');
 
+//Connecting to database
 connectDatabase();
 
 //Added cors policy
@@ -17,6 +18,7 @@ app.use('/api/auth',require('./routes/auth'));
 app.use('/api/hearts',require('./routes/hearts'));
 app.use('/api/shopItems',require('./routes/shopItems'));
 
+//Production build for heroku
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'));
 
@@ -28,4 +30,5 @@ if(process.env.NODE_ENV === 'production'){
 //Initialized Port ( checking if value is added from proccess.env, if not making localhost:5000 )
 const PORT = process.env.PORT || 5000;
 
+//Added listen function
 app.listen(PORT, () => console.log(`App running on Port: ${PORT}`));
