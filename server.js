@@ -11,6 +11,7 @@ app.use(cors());
 
 app.use(express.json({ extended: false }));
 
+//Routes
 app.use('/api/users',require('./routes/users'));
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/hearts',require('./routes/hearts'));
