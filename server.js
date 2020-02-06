@@ -6,6 +6,7 @@ const connectDatabase = require('./config/db');
 
 connectDatabase();
 
+//Added cors policy
 app.use(cors());
 
 app.use(express.json({ extended: false }));
