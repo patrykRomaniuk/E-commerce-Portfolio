@@ -3,14 +3,19 @@ const router = express.Router();
 const auth = require('../middleware/auth');
 const User = require('../modules/User');
 
+//Sum items price via backend
 router.get(
     '/sum_prices',
+    //Checking if user is logged in
     auth,
     async(req,res) => {
         try {
+            //Getting user by id
             let user = await User.findById(req.user.id);
+            //Adding prices
             const findPrices = user.items.map(item => item.price)
             .reduce((a,b) => a + b,0);
+            //Output the result
             res.json(findPrices)
         } catch (error) {
             console.log(error.message);
