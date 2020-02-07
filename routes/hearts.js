@@ -3,6 +3,7 @@ const router = express.Router();
 const auth = require('../middleware/auth');
 const User = require('../modules/User');
 
+//Getting all user hearts ( favourite items )
 router.get(
     '/',
     auth,
@@ -17,6 +18,7 @@ router.get(
     }
 )
 
+//Adding heart Item ( favourite item ), to start of an array
 router.put(
     '/',
     auth,
@@ -43,6 +45,7 @@ router.put(
     }
 );
 
+//Removing heart by ID
 router.delete(
     '/:id',
     auth,
