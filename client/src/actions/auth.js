@@ -15,12 +15,16 @@ import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
 import { getSumPrices } from './allPrices';
 
+//Getting user
 export const loadUser = () => async dispatch => {
+    //Checking if there is token
     if(localStorage.token){
         setAuthToken(localStorage.token);
     }
     try {
+        //Sending request
         const res = await axios.get('https://obscure-wave-98753.herokuapp.com/api/users/me');
+        //Dispatching action
         dispatch({
             type: USER_LOADED,
             payload: res.data
