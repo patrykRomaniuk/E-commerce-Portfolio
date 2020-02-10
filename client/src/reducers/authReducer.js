@@ -8,6 +8,7 @@ import {
     LOG_OUT
 } from '../actions/constants';
 
+//Initalized reducer
 const initialState = {
     token: localStorage.getItem('token'),
     isAuthenticated: false,
@@ -17,9 +18,12 @@ const initialState = {
 };
 
 const auth = (state = initialState,action) => {
+    //Taking payload and type from action
     const { type,payload } = action;
     switch(type){
+        //What if user is loaded
         case USER_LOADED:
+            //Taking token from localStorage
             localStorage.getItem('token');
             return {
                 ...state,
@@ -27,8 +31,10 @@ const auth = (state = initialState,action) => {
                 isAuthenticated: true,
                 loading: false
             }
+        //What if user logged in
         case REGISTER_SUCCESS:
         case LOGIN_SUCCESS:
+            //Setting item to localStorage
             localStorage.setItem('token',payload.token);
             return {
                 ...state,
@@ -36,10 +42,12 @@ const auth = (state = initialState,action) => {
                 isAuthenticated: true,
                 loading: false
             }
+        //What if something goes wrong
         case LOGIN_FAIL:
         case REGISTER_FAIL:
         case AUTH_ERROR:
         case LOG_OUT:
+            //Removing token from localStorage
             localStorage.removeItem('token');
             return {
                 ...state,
@@ -48,6 +56,7 @@ const auth = (state = initialState,action) => {
                 isAuthenticated: false,
                 user: null
             }
+        //Default state
         default:
             return state
     }
