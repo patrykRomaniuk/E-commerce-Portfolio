@@ -1,6 +1,7 @@
 import React from 'react';
 import Loader from 'react-loader';
 
+//App spinner
 const Spinner = () => {
     return (
         <React.Fragment>
@@ -14,4 +15,4 @@ const Spinner = () => {
     )
 }
 
-export default Spinner
+export default Spinner;
