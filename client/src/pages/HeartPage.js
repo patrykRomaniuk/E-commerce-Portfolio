@@ -11,6 +11,7 @@ function HeartPage({ auth: { isAuthenticated,user } }) {
     if(isAuthenticated && user === null){
         alert('User is not loaded');
         return <Redirect to="/man"/>
+    //Checking if user is logged in
     } else if (!isAuthenticated && user === null){
         alert('You are not registered');
         return <Redirect to="/man"/>
