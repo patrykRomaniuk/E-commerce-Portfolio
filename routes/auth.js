@@ -28,6 +28,7 @@ router.post(
         if(!errors.isEmpty()){
             return res.status(400).json({ errors: errors.array() });
         }
+        
         try {
             //Checking if passwords match
             const isMatch = await bcryptjs.compare(password,user.password);
