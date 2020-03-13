@@ -7,6 +7,7 @@ import HeartsWrapper from '../components/HeartsWrapper';
 import { connect } from 'react-redux';
 
 function HeartPage({ auth: { isAuthenticated,user } }) {
+    //Checking if user is loaded
     if(isAuthenticated && user === null){
         alert('User is not loaded');
         return <Redirect to="/man"/>
