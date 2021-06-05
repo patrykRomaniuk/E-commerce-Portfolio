@@ -1,7 +1,6 @@
 import React from 'react';
 import Loader from 'react-loader';
 
-//App spinner
 const Spinner = () => {
     return (
         <React.Fragment>

@@ -15,15 +15,10 @@ function AccountPage({
 }) {
     //Checking if user is loaded
     if(isAuthenticated && user === null){
-        //Alert
         alert('User is not loaded');
-        //Redirecting to man page
         return <Redirect to="/man"/>
-        //Checking if user is logged in
     } else if (!isAuthenticated && user === null){
-        //Alert
         alert('You are not registered');
-        //Redirecting to man page
         return <Redirect to="/man"/>
     }
     return loading && user !== null ? (<Spinner/>) : (

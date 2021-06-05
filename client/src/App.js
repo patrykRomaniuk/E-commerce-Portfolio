@@ -18,20 +18,16 @@ import { Provider } from 'react-redux';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
-//Checking if there is token in localstorage
 if(localStorage.token){
-  //Setting token to header
   setAuthToken(localStorage.token);
 }
 
 const App = () => {
 
   useEffect(() => {
-    //Loading user
     store.dispatch(loadUser());
   },[]);
 
-    //Getting manItem data ( it could be done with parameter via :, but I wanted to make it little bit more complex )
     const loopingThroughItemManToItem = ItemData.map(item => {
       const manToItem = item.manePageItems.map(manItem => {
         const manItemVar = manItem.items.map(item => {
@@ -53,7 +49,6 @@ const App = () => {
       return manToItem;
   })
 
-    //Getting man data ( it could be done with parameter via :, but I wanted to make it little bit more complex )
   const loopingThroughItemDataMan = ItemData.map(item => {
     const man = item.manePageItems.map(manItem => {
       return (
@@ -71,7 +66,6 @@ const App = () => {
     return man;
     })
 
-    //Getting woman data ( it could be done with parameter via :, but I wanted to make it little bit more complex )
     const loopingThroughItemWomanToItem = ItemData.map(item => {
       const womanToItem = item.womanPageItems.map(womanItem => {
         const womanItemVar = womanItem.items.map(item => {
@@ -92,8 +86,6 @@ const App = () => {
       })
       return womanToItem;
   })
-
-    //Getting womanItem data ( it could be done with parameter via :, but I wanted to make it little bit more complex )
   const loopingThroughItemDataWoman = ItemData.map(item => {
     const woman = item.womanPageItems.map(womanItem => {
       return (
